@@ -25,6 +25,14 @@ layout: page
         {% endif %}
       {% endcapture %}
       {% assign thumbnail=thumbnail | strip %}
+<!-- 
+      {% if post.cover-img %}
+        <div class="post-cover-image">
+          <a href="{{ post.url | absolute_url }}" aria-label="Cover Image">
+            <img src="{{ post.cover-img | absolute_url }}" alt="Post cover image">
+          </a>
+        </div>
+      {% endif %} -->
 
       {% if site.feed_show_excerpt == false %}
       {% if thumbnail != "" %}
@@ -45,7 +53,7 @@ layout: page
           </h3>
         {% endif %}
       </a>
-
+      
       {% if post.author %}
         <span>By <strong>{{ post.author | strip_html }}</strong></span>
       {% endif %}

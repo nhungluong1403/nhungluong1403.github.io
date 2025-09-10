@@ -19,15 +19,17 @@ layout: null
   --footer-hover-col: {{ site.footer-hover-col | default: "#0085A1" }};
 
   /* common CSS variables */
-  --body-font: 'Lora', 'Times New Roman', serif;
-  --header-font: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* --body-font: 'Times New Roman', serif; // 'Lora',  */
+  --body-font: Helvetica, Arial, sans-serif;
+  /* --header-font: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+  --header-font: 'Arial', Helvetica, sans-serif;
   --mid-col: #808080;
 }
 
 /* --- General --- */
 
 html {
-  font-size: 100%
+  font-size: 90%
 }
 
 body {
@@ -58,7 +60,7 @@ h1,h2,h3,h4,h5,h6 {
   line-height: 1.1;
 }
 h1 {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
 }
 h2 {
   font-size: 1.875rem;
