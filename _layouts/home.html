@@ -11,7 +11,6 @@ layout: page
   {% for post in posts %}
   <li class="post-preview">
     <article>
-
       {%- capture thumbnail -%}
         {% if post.thumbnail-img %}
           {{ post.thumbnail-img }}
@@ -25,14 +24,14 @@ layout: page
         {% endif %}
       {% endcapture %}
       {% assign thumbnail=thumbnail | strip %}
-<!-- 
+
       {% if post.cover-img %}
         <div class="post-cover-image">
           <a href="{{ post.url | absolute_url }}" aria-label="Cover Image">
             <img src="{{ post.cover-img | absolute_url }}" alt="Post cover image">
           </a>
         </div>
-      {% endif %} -->
+      {% endif %}
 
       {% if site.feed_show_excerpt == false %}
       {% if thumbnail != "" %}
@@ -57,10 +56,10 @@ layout: page
       {% if post.author %}
         <span>By <strong>{{ post.author | strip_html }}</strong></span>
       {% endif %}
-      <p class="post-meta">
+      <!-- <p class="post-meta">
         {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
         Posted on {{ post.date | date: date_format }}
-      </p>
+      </p> -->
 
       {% if thumbnail != "" %}
       <div class="post-image post-image-small">
@@ -80,12 +79,14 @@ layout: page
       {% endif %}
 
       <div class="post-entry">
+        <a href="{{ post.url | absolute_url }}" class="post-read-more">
         {% assign excerpt_length = site.excerpt_length | default: 50 %}
         {{ post.excerpt | strip_html | truncatewords: excerpt_length }}
         {% assign excerpt_word_count = post.excerpt | number_of_words %}
         {% if post.content != post.excerpt or excerpt_word_count > excerpt_length %}
-          <a href="{{ post.url | absolute_url }}" class="post-read-more">[Read&nbsp;More]</a>
+          [Read&nbsp;More]
         {% endif %}
+        </a>
       </div>
       {% endunless %}
 
