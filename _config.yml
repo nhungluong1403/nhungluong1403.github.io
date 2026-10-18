@@ -20,6 +20,8 @@ author: Nhung Lương
 ###############################################
 
 navbar-links:
+  About Me: "aboutme"
+  Portfolio: "https://luongngocnhung.my.canva.site/luong-ngoc-nhung-communications-portfolio/"
   # About Me: "aboutme"
   # Resources:
   #   - Beautiful Jekyll: "https://beautifuljekyll.com"
@@ -50,7 +52,8 @@ round-avatar: true
 # You can change the order that they show up on the page by changing the order here.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "nhuung.luong1403@gmail.com"
+  email: "nhung.luong1403@gmail.com"
+  linkedin: "l%C6%B0%C6%A1ng-ng%E1%BB%8Dc-nhung"
   facebook: nhungluong
   youtube: "@nhungluong1403"
 #  medium: yourname
